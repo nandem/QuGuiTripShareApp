@@ -2,34 +2,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="记录" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="照片" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="视频" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="设置" />
+
+        <item android:title="去">
+            <menu>
+                <item
+                        android:id="@+id/nav_camera"
+                        android:icon="@drawable/ic_menu_camera"
+                        android:title="记录" />
+                <item
+                        android:id="@+id/nav_gallery"
+                        android:icon="@drawable/ic_menu_gallery"
+                        android:title="照片" />
+            </menu>
+        </item>
     </group>
 
-    <item android:title="你去哪儿">
+    <item android:title="归">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="分享" />
+                    android:id="@+id/nav_trips"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="我的旅行" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="发送" />
+                    android:id="@+id/nav_slideshow"
+                    android:icon="@drawable/ic_menu_contact"
+                    android:title="朋友" />
+            <item
+                    android:id="@+id/nav_manage"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="设置" />
         </menu>
     </item>
 

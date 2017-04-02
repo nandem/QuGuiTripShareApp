@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import cn.nandem.qugui.R;
 import cn.nandem.qugui.listener.OnItemClickListener;
-import cn.nandem.qugui.model.Article;
+import cn.nandem.qugui.model.Progress;
 import cn.nandem.qugui.module.base.BaseMainFragment;
 import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
@@ -81,10 +81,10 @@ public class HomeFragment extends BaseMainFragment {
         });
 
         // Init Datas
-        List<Article> articleList = new ArrayList<>();
+        List<Progress> articleList = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
             int index = (int) (Math.random() * 3);
-            Article article = new Article(mTitles[index], mContents[index]);
+            Progress article = new Progress(mTitles[index], mContents[index]);
             articleList.add(article);
         }
         mAdapter.setDatas(articleList);

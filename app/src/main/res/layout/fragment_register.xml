@@ -26,8 +26,7 @@
                     android:layout_height="wrap_content"
                     android:hint="用户名"
                     android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:maxLines="1"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -39,13 +38,12 @@
                     android:id="@+id/et_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/password"
+                    android:hint="密码"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="登录"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:maxLines="1"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -59,8 +57,7 @@
                     android:layout_height="wrap_content"
                     android:hint="确认密码"
                     android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:maxLines="1"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -71,8 +68,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/register"
-                android:textStyle="bold"/>
+                android:text="登录"
+                android:background="#000000"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

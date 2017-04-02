@@ -10,14 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 import cn.nandem.qugui.R;
 import cn.nandem.qugui.listener.OnItemClickListener;
-import cn.nandem.qugui.model.Article;
+import cn.nandem.qugui.model.Progress;
 
 /**
  * 主页HomeFragment  Adapter
  * Created by YoKeyword on 16/2/1.
  */
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
-    private List<Article> mItems = new ArrayList<>();
+    private List<Progress> mItems = new ArrayList<>();
     private LayoutInflater mInflater;
 
     private OnItemClickListener mClickListener;
@@ -26,7 +26,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
         this.mInflater = LayoutInflater.from(context);
     }
 
-    public void setDatas(List<Article> items) {
+    public void setDatas(List<Progress> items) {
         mItems.clear();
         mItems.addAll(items);
     }
@@ -49,7 +49,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Article item = mItems.get(position);
+        Progress item = mItems.get(position);
         holder.tvTitle.setText(item.getTitle());
 //        holder.tvContent.setText(item.getContent());
     }
@@ -59,7 +59,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
         return mItems.size();
     }
 
-    public Article getItem(int position) {
+    public Progress getItem(int position) {
         return mItems.get(position);
     }
 

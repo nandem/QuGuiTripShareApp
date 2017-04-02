@@ -4,38 +4,38 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by YoKeyword on 16/2/1.
+ * @author Nandem on 2017-04-02
  */
-public class Article implements Parcelable{
+public class Progress implements Parcelable{
     private String title;
     private String content;
     private int imgRes;
 
-    public Article(String title, String content) {
+    public Progress(String title, String content) {
         this.title = title;
         this.content = content;
     }
 
-    public Article(String title, int imgRes) {
+    public Progress(String title, int imgRes) {
         this.title = title;
         this.imgRes = imgRes;
     }
 
-    protected Article(Parcel in) {
+    protected Progress(Parcel in) {
         title = in.readString();
         content = in.readString();
         imgRes = in.readInt();
     }
 
-    public static final Creator<Article> CREATOR = new Creator<Article>() {
+    public static final Creator<Progress> CREATOR = new Creator<Progress>() {
         @Override
-        public Article createFromParcel(Parcel in) {
-            return new Article(in);
+        public Progress createFromParcel(Parcel in) {
+            return new Progress(in);
         }
 
         @Override
-        public Article[] newArray(int size) {
-            return new Article[size];
+        public Progress[] newArray(int size) {
+            return new Progress[size];
         }
     };
 
