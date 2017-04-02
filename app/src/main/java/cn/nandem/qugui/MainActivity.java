@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import cn.nandem.qugui.module.account.LoginFragment;
 import cn.nandem.qugui.module.base.BaseMainFragment;
 import cn.nandem.qugui.module.home.HomeFragment;
 import me.yokeyword.fragmentation.SupportActivity;
@@ -68,15 +69,20 @@ public class MainActivity extends SupportActivity implements NavigationView.OnNa
         mUserName = (TextView) llNavHeader.findViewById(R.id.nav_TextView_userName);
         mUserSlogan = (TextView) llNavHeader.findViewById(R.id.nav_TextView_userSlogan);
         mUserHeadIcon = (ImageView) llNavHeader.findViewById(R.id.nav_ImageView_userHeadIcon);
-        llNavHeader.setOnClickListener(new View.OnClickListener() {
+        llNavHeader.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 mDrawer.closeDrawer(GravityCompat.START);
 
-                mDrawer.postDelayed(new Runnable() {
+                mDrawer.postDelayed(new Runnable()
+                {
                     @Override
-                    public void run() {
-                        Toast.makeText(MainActivity.this, "看好了啊，准备登录了！", Toast.LENGTH_LONG).show();
+                    public void run()
+                    {
+                        start(LoginFragment.newInstance());
+//                        Toast.makeText(MainActivity.this, "看好了啊，准备登录了！", Toast.LENGTH_LONG).show();
                     }
                 }, 250);
             }

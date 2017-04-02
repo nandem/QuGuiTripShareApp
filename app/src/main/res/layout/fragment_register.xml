@@ -66,12 +66,11 @@
                 android:id="@+id/btn_register"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
-                android:text="登录"
+                android:text="注册"
                 android:background="#000000"
-                android:textColor="#FFFFFF"
-                android:textSize="22sp"/>
+                android:textColor="#FFFFFF"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
