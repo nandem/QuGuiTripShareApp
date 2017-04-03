@@ -2,7 +2,6 @@ package cn.nandem.qugui.module.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +14,7 @@ import cn.nandem.qugui.module.base.BaseBackFragment;
 /**
  * Created by YoKeyword on 16/2/3.
  */
-public class DetailFragment extends BaseBackFragment
+public class HomeDetailFragment extends BaseBackFragment
 {
     private static final int REQ_MODIFY_FRAGMENT = 100;
 
@@ -26,8 +25,8 @@ public class DetailFragment extends BaseBackFragment
     private TextView mTvContent;
     private String mTitle;
 
-    public static DetailFragment newInstance(String title) {
-        DetailFragment fragment = new DetailFragment();
+    public static HomeDetailFragment newInstance(String title) {
+        HomeDetailFragment fragment = new HomeDetailFragment();
         Bundle bundle = new Bundle();
         bundle.putString(ARG_TITLE, title);
         fragment.setArguments(bundle);
