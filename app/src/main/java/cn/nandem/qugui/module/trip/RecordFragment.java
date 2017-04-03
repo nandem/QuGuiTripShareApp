@@ -1,4 +1,4 @@
-package cn.nandem.qugui.module.home;
+package cn.nandem.qugui.module.trip;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,21 +16,23 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Nandem on 2017-04-02.
+ */
 
-public class HomeFragment extends BaseMainFragment
+public class RecordFragment extends BaseMainFragment
 {
-
     private Toolbar mToolbar;
 
-    public static HomeFragment newInstance()
+    public static RecordFragment newInstance()
     {
-        return new HomeFragment();
+        return new RecordFragment();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.home_fragment, container, false);
+        View view = inflater.inflate(R.layout.trip_fragment_record, container, false);
 
         initView(view);
 
@@ -47,8 +49,17 @@ public class HomeFragment extends BaseMainFragment
     {
         mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
-        mToolbar.setTitle("首页");
+        mToolbar.setTitle("记录");
         initToolbarNav(mToolbar, true);
+
+        LinearLayoutManager manager = new LinearLayoutManager(_mActivity);
+
+        // Init Datas
+        List<Progress> articleList = new ArrayList<>();
+        for(int i = 0; i < 6; i++)
+        {
+            int index = (int) (Math.random() * 3);
+        }
     }
 
     /**
@@ -68,3 +79,4 @@ public class HomeFragment extends BaseMainFragment
         super.onDestroyView();
     }
 }
+

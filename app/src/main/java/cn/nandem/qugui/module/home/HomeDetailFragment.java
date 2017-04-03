@@ -46,7 +46,7 @@ public class HomeDetailFragment extends BaseBackFragment
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_detail, container, false);
+        View view = inflater.inflate(R.layout.trip_fragment_ontrip_detail, container, false);
         initView(view);
 
         return view;

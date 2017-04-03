@@ -16,7 +16,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import cn.nandem.qugui.module.account.LoginFragment;
 import cn.nandem.qugui.module.base.BaseMainFragment;
+import cn.nandem.qugui.module.friends.FriendsFragment;
 import cn.nandem.qugui.module.home.HomeFragment;
+import cn.nandem.qugui.module.recommend.RecommendFragment;
+import cn.nandem.qugui.module.settting.SettingFragment;
+import cn.nandem.qugui.module.trip.MyTripsFragment;
+import cn.nandem.qugui.module.trip.OnTripFragment;
 import me.yokeyword.fragmentation.SupportActivity;
 import me.yokeyword.fragmentation.SupportFragment;
 import me.yokeyword.fragmentation.helper.FragmentLifecycleCallbacks;
@@ -50,7 +55,8 @@ public class MainActivity extends SupportActivity implements NavigationView.OnNa
 
         if(savedInstanceState == null)
         {
-            loadRootFragment(R.id.fl_container, HomeFragment.newInstance());
+            loadRootFragment(R.id.fl_container, OnTripFragment.newInstance());
+//            loadRootFragment(R.id.fl_container, HomeFragment.newInstance());
         }
 
 
@@ -82,7 +88,6 @@ public class MainActivity extends SupportActivity implements NavigationView.OnNa
                     public void run()
                     {
                         start(LoginFragment.newInstance());
-//                        Toast.makeText(MainActivity.this, "看好了啊，准备登录了！", Toast.LENGTH_LONG).show();
                     }
                 }, 250);
             }
@@ -139,28 +144,31 @@ public class MainActivity extends SupportActivity implements NavigationView.OnNa
     @Override
     public boolean onNavigationItemSelected(MenuItem item)
     {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if(id == R.id.nav_camera)
+        if(id == R.id.nav_current_trip)
         {
-            Toast.makeText(this, "nav_camera", Toast.LENGTH_LONG).show();
+            replaceLoadRootFragment(R.id.fl_container, OnTripFragment.newInstance(), false);
         }
-        else if(id == R.id.nav_gallery)
+        else if(id == R.id.nav_home)
         {
-            Toast.makeText(this, "nav_gallery", Toast.LENGTH_LONG).show();
+            replaceLoadRootFragment(R.id.fl_container, HomeFragment.newInstance(), false);
         }
-        else if(id == R.id.nav_slideshow)
+        else if(id == R.id.nav_recommend)
         {
-            Toast.makeText(this, "nav_slideshow", Toast.LENGTH_LONG).show();
+            replaceLoadRootFragment(R.id.fl_container, RecommendFragment.newInstance(), false);
         }
-        else if(id == R.id.nav_manage)
+        else if(id == R.id.nav_contact)
         {
-            Toast.makeText(this, "nav_manage", Toast.LENGTH_LONG).show();
+            replaceLoadRootFragment(R.id.fl_container, FriendsFragment.newInstance(), false);
         }
         else if(id == R.id.nav_trips)
         {
-            Toast.makeText(this, "nav_send", Toast.LENGTH_LONG).show();
+            replaceLoadRootFragment(R.id.fl_container, MyTripsFragment.newInstance(), false);
+        }
+        else if(id == R.id.nav_setting)
+        {
+            replaceLoadRootFragment(R.id.fl_container, SettingFragment.newInstance(), false);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -18,7 +18,7 @@ public class BaseMainFragment extends BaseFragment {
     }
 
     protected void initToolbarNav(Toolbar toolbar, boolean isHome) {
-        toolbar.setNavigationIcon(R.drawable.ic_menu_slide_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_menu_slide);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

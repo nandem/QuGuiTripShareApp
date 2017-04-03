@@ -26,12 +26,14 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="我的虚幻岁月"
+        android:textSize="16sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/nav_TextView_userSlogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="12sp"
         android:text="向来心是看客心，奈何人是剧中人" />
 
 </LinearLayout>

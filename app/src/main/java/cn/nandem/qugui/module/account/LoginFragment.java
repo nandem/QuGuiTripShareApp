@@ -21,7 +21,7 @@ public class LoginFragment extends BaseBackFragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.fragment_login, container, false);
+        View view = inflater.inflate(R.layout.account_fragment_login, container, false);
 
         initView(view);
 

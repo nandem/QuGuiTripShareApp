@@ -19,7 +19,7 @@ public class RegisterFragment extends BaseBackFragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.fragment_register, container, false);
+        View view = inflater.inflate(R.layout.account_fragment_register, container, false);
 
         initView(view);
 

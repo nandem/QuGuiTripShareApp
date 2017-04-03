@@ -1,4 +1,4 @@
-package cn.nandem.qugui.module.home;
+package cn.nandem.qugui.module.recommend;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,27 +10,30 @@ import android.widget.Toast;
 import cn.nandem.qugui.R;
 import cn.nandem.qugui.model.Progress;
 import cn.nandem.qugui.module.base.BaseMainFragment;
+import cn.nandem.qugui.module.trip.OnTripFragment;
 import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Nandem on 2017-04-03.
+ */
 
-public class HomeFragment extends BaseMainFragment
+public class RecommendFragment extends BaseMainFragment
 {
-
     private Toolbar mToolbar;
 
-    public static HomeFragment newInstance()
+    public static RecommendFragment newInstance()
     {
-        return new HomeFragment();
+        return new RecommendFragment();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.home_fragment, container, false);
+        View view = inflater.inflate(R.layout.recommend_fragment, container, false);
 
         initView(view);
 
@@ -47,8 +50,9 @@ public class HomeFragment extends BaseMainFragment
     {
         mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
-        mToolbar.setTitle("首页");
+        mToolbar.setTitle("推荐");
         initToolbarNav(mToolbar, true);
+
     }
 
     /**

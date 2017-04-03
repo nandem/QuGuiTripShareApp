@@ -1,36 +1,33 @@
-package cn.nandem.qugui.module.home;
+package cn.nandem.qugui.module.trip;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import cn.nandem.qugui.R;
-import cn.nandem.qugui.model.Progress;
 import cn.nandem.qugui.module.base.BaseMainFragment;
 import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
-import java.util.ArrayList;
-import java.util.List;
+/**
+ * @author Nandem on 2017-04-04.
+ */
 
-
-public class HomeFragment extends BaseMainFragment
+public class MyTripsFragment extends BaseMainFragment
 {
-
     private Toolbar mToolbar;
 
-    public static HomeFragment newInstance()
+    public static MyTripsFragment newInstance()
     {
-        return new HomeFragment();
+        return new MyTripsFragment();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.home_fragment, container, false);
+        View view = inflater.inflate(R.layout.trip_fragment_my_trips, container, false);
 
         initView(view);
 
@@ -47,7 +44,7 @@ public class HomeFragment extends BaseMainFragment
     {
         mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
-        mToolbar.setTitle("首页");
+        mToolbar.setTitle("当前旅行");
         initToolbarNav(mToolbar, true);
     }
 
