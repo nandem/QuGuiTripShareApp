@@ -21,7 +21,7 @@ import cn.nandem.qugui.module.home.HomeFragment;
 import cn.nandem.qugui.module.recommend.RecommendFragment;
 import cn.nandem.qugui.module.settting.SettingFragment;
 import cn.nandem.qugui.module.trip.MyTripsFragment;
-import cn.nandem.qugui.module.trip.OnTripFragment;
+import cn.nandem.qugui.module.trip.ontrip.OnTripFragment;
 import me.yokeyword.fragmentation.SupportActivity;
 import me.yokeyword.fragmentation.SupportFragment;
 import me.yokeyword.fragmentation.helper.FragmentLifecycleCallbacks;

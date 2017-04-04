@@ -44,7 +44,7 @@ public class MyTripsFragment extends BaseMainFragment
     {
         mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
-        mToolbar.setTitle("当前旅行");
+        mToolbar.setTitle("我的旅行");
         initToolbarNav(mToolbar, true);
     }
 

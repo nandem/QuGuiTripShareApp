@@ -1,38 +1,31 @@
-package cn.nandem.qugui.module.trip;
+package cn.nandem.qugui.module.trip.ontrip;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import cn.nandem.qugui.R;
-import cn.nandem.qugui.model.Progress;
 import cn.nandem.qugui.module.base.BaseMainFragment;
 import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * @author Nandem on 2017-04-02.
+ * @author Nandem on 2017-04-04.
  */
 
-public class RecordFragment extends BaseMainFragment
+public class OnTripFragmentDoing extends BaseMainFragment
 {
-    private Toolbar mToolbar;
-
-    public static RecordFragment newInstance()
+    public static OnTripFragmentDoing newInstance()
     {
-        return new RecordFragment();
+        return new OnTripFragmentDoing();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.trip_fragment_record, container, false);
+        View view = inflater.inflate(R.layout.trip_fragment_ontrip_doing, container, false);
 
         initView(view);
 
@@ -47,19 +40,6 @@ public class RecordFragment extends BaseMainFragment
 
     private void initView(View view)
     {
-        mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
-
-        mToolbar.setTitle("记录");
-        initToolbarNav(mToolbar, true);
-
-        LinearLayoutManager manager = new LinearLayoutManager(_mActivity);
-
-        // Init Datas
-        List<Progress> articleList = new ArrayList<>();
-        for(int i = 0; i < 6; i++)
-        {
-            int index = (int) (Math.random() * 3);
-        }
     }
 
     /**
@@ -79,4 +59,3 @@ public class RecordFragment extends BaseMainFragment
         super.onDestroyView();
     }
 }
-

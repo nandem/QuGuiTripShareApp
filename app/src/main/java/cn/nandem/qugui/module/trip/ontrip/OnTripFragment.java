@@ -1,15 +1,18 @@
-package cn.nandem.qugui.module.trip;
+package cn.nandem.qugui.module.trip.ontrip;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import cn.nandem.qugui.R;
-import cn.nandem.qugui.model.Progress;
 import cn.nandem.qugui.module.base.BaseMainFragment;
+import cn.nandem.qugui.module.trip.adapter.MyFragmentPagerAdapter;
 import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
@@ -22,7 +25,14 @@ import java.util.List;
 
 public class OnTripFragment extends BaseMainFragment
 {
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
+    private LinearLayout mTarget;
     private Toolbar mToolbar;
+
+
+    private List<Fragment> mFragments = new ArrayList<>();//fragment集合
+    private List<String> mTitles = new ArrayList<>();//页卡视图集合
 
     public static OnTripFragment newInstance()
     {
@@ -48,9 +58,37 @@ public class OnTripFragment extends BaseMainFragment
     private void initView(View view)
     {
         mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
-
-        mToolbar.setTitle("当前旅行");
+//        mToolbar.setTitle("当前旅行");
         initToolbarNav(mToolbar, true);
+
+        mTabLayout = (TabLayout) view.findViewById(R.id.toolbar_tab);
+        mViewPager = (ViewPager) view.findViewById(R.id.trip_viewpager_on_trip);
+        mTarget = (LinearLayout) view.findViewById(R.id.trip_linear_layout_on_trip);
+
+        initTabTitle();
+        initFragments();
+        mViewPager.setAdapter(new MyFragmentPagerAdapter(getChildFragmentManager(), mTitles, mFragments));
+
+    }
+
+    /**
+     * 初始化tab标签
+     */
+    public void initTabTitle() {
+        mTitles.add("1");
+        mTitles.add("2");
+        mTitles.add("3");
+        for (int i = 0; i < mTitles.size(); i++) {
+            mTabLayout.addTab(mTabLayout.newTab().setText(mTitles.get(i)));
+        }
+
+        mTabLayout.setupWithViewPager(mViewPager);
+    }
+
+    public void initFragments() {
+        mFragments.add(OnTripFragmentDoing.newInstance());
+        mFragments.add(OnTripFragmentRecord.newInstance());
+        mFragments.add(OnTripFragmentDetail.newInstance());
     }
 
     /**

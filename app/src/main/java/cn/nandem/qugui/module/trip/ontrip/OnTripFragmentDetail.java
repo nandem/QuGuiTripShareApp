@@ -1,4 +1,4 @@
-package cn.nandem.qugui.module.recommend;
+package cn.nandem.qugui.module.trip.ontrip;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -12,22 +12,20 @@ import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
 /**
- * @author Nandem on 2017-04-03.
+ * @author Nandem on 2017-04-04.
  */
 
-public class RecommendFragment extends BaseMainFragment
+public class OnTripFragmentDetail extends BaseMainFragment
 {
-    private Toolbar mToolbar;
-
-    public static RecommendFragment newInstance()
+    public static OnTripFragmentDetail newInstance()
     {
-        return new RecommendFragment();
+        return new OnTripFragmentDetail();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.recommend_fragment, container, false);
+        View view = inflater.inflate(R.layout.trip_fragment_ontrip_detail, container, false);
 
         initView(view);
 
@@ -42,11 +40,6 @@ public class RecommendFragment extends BaseMainFragment
 
     private void initView(View view)
     {
-        mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
-
-        mToolbar.setTitle("推荐");
-        initToolbarNav(mToolbar, true);
-
     }
 
     /**
