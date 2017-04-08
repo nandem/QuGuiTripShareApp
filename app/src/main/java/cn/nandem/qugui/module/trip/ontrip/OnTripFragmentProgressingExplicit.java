@@ -21,14 +21,13 @@ public class OnTripFragmentProgressingExplicit extends BaseBackFragment
     private Toolbar mToolbar;
     private TextView mTvContent;
     private FloatingActionButton mFab;
-    private String[] mTitles = new String[]{"一", "二", "三", "四", "五", "六"};
-    private int index;
+    private int titleId;
 
-    public static OnTripFragmentProgressingExplicit newInstance(int index)
+    public static OnTripFragmentProgressingExplicit newInstance(int titleId)
     {
         OnTripFragmentProgressingExplicit fragment = new OnTripFragmentProgressingExplicit();
         Bundle bundle = new Bundle();
-        bundle.putInt("index", index);
+        bundle.putInt("titleId", titleId);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -41,7 +40,7 @@ public class OnTripFragmentProgressingExplicit extends BaseBackFragment
         Bundle bundle = getArguments();
         if(bundle != null)
         {
-            this.index = bundle.getInt("index");
+            this.titleId = bundle.getInt("titleId");
         }
     }
 
@@ -57,7 +56,7 @@ public class OnTripFragmentProgressingExplicit extends BaseBackFragment
     private void initView(View view)
     {
         mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        mToolbar.setTitle(mTitles[this.index]);
+        mToolbar.setTitle(getContext().getString(titleId));
 
         initToolbarNav(mToolbar);
     }

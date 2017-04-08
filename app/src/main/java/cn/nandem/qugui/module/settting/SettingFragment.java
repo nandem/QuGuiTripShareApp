@@ -27,8 +27,6 @@ import java.util.List;
 public class SettingFragment extends BaseMainFragment
 {
     private Toolbar mToolbar;
-    @BindView(R.id.button2)
-    Button button;
 
     public static SettingFragment newInstance()
     {
@@ -47,11 +45,6 @@ public class SettingFragment extends BaseMainFragment
         return view;
     }
 
-    public void test(View view)
-    {
-
-    }
-
     @Override
     protected FragmentAnimator onCreateFragmentAnimator()
     {
@@ -64,15 +57,6 @@ public class SettingFragment extends BaseMainFragment
 
         mToolbar.setTitle("设置");
         initToolbarNav(mToolbar, true);
-
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                start(OnTripFragmentProgressingExplicit.newInstance(1));
-            }
-        });
     }
 
     /**

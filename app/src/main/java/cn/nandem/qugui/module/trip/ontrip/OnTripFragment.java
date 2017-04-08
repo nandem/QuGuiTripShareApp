@@ -13,8 +13,11 @@ import android.widget.Toast;
 import cn.nandem.qugui.R;
 import cn.nandem.qugui.module.base.BaseMainFragment;
 import cn.nandem.qugui.module.trip.adapter.MyFragmentPagerAdapter;
+import cn.nandem.qugui.module.trip.busevent.ExplicitProgressingEvent;
 import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +49,15 @@ public class OnTripFragment extends BaseMainFragment
 
         initView(view);
 
+        EventBus.getDefault().register(this);
+
         return view;
+    }
+
+    @Subscribe
+    public void startExplictiTripProgress(ExplicitProgressingEvent explicitProgressingEvent)
+    {
+        start(explicitProgressingEvent.getSupportFragment());
     }
 
     @Override
