@@ -1,16 +1,13 @@
 package cn.nandem.qugui.module.trip.ontrip;
 
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
 import cn.nandem.qugui.R;
@@ -24,7 +21,7 @@ import java.util.List;
  * @author Nandem on 2017-04-04.
  */
 
-public class OnTripFragmentDoing extends BaseMainFragment
+public class OnTripFragmentProgressing extends BaseMainFragment
 {
     @BindViews({R.id.trip_on_trip_btn_1st_phase, R.id.trip_on_trip_btn_2nd_phase, R.id.trip_on_trip_btn_3rd_phase, R.id.trip_on_trip_btn_4th_phase, R.id.trip_on_trip_btn_5th_phase, R.id.trip_on_trip_btn_6th_phase})
     List<Button> buttonList;
@@ -32,15 +29,15 @@ public class OnTripFragmentDoing extends BaseMainFragment
 //    Button firstPhase;
     private View globalView;
 
-    public static OnTripFragmentDoing newInstance()
+    public static OnTripFragmentProgressing newInstance()
     {
-        return new OnTripFragmentDoing();
+        return new OnTripFragmentProgressing();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.trip_fragment_ontrip_doing, container, false);
+        View view = inflater.inflate(R.layout.trip_fragment_ontrip_progressing, container, false);
 
         ButterKnife.bind(this, view);
         initView(view);
@@ -56,13 +53,15 @@ public class OnTripFragmentDoing extends BaseMainFragment
 
     private void initView(View view)
     {
-        for(Button b : buttonList)
+        for(int i = 0; i < 1; i++)
         {
-            b.setOnClickListener(new View.OnClickListener()
+            buttonList.get(i).setOnClickListener(new View.OnClickListener()
             {
                 @Override
                 public void onClick(View v)
                 {
+
+                    /*/
                     Snackbar.make(v, "yeah", Snackbar.LENGTH_LONG)
                             .setActionTextColor(Color.YELLOW)
                             .setAction("去看看", new View.OnClickListener()
@@ -73,8 +72,19 @@ public class OnTripFragmentDoing extends BaseMainFragment
                                     Toast.makeText(_mActivity, "这有点 吊啊", Toast.LENGTH_LONG).show();
                                 }
                             }).show();
+
+                    //*/
+                    start(OnTripFragmentProgressingExplicit.newInstance(1));
                 }
             });
+        }
+    }
+
+    @Override
+    protected void onFragmentResult(int requestCode, int resultCode, Bundle data)
+    {
+        if (requestCode == 0 && resultCode == 1 && data != null) {
+            Toast.makeText(_mActivity, "修改标题成功!", Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -6,10 +6,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import cn.nandem.qugui.R;
 import cn.nandem.qugui.model.Progress;
 import cn.nandem.qugui.module.base.BaseMainFragment;
+import cn.nandem.qugui.module.trip.ontrip.OnTripFragmentProgressingExplicit;
 import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
@@ -23,6 +27,8 @@ import java.util.List;
 public class SettingFragment extends BaseMainFragment
 {
     private Toolbar mToolbar;
+    @BindView(R.id.button2)
+    Button button;
 
     public static SettingFragment newInstance()
     {
@@ -34,9 +40,16 @@ public class SettingFragment extends BaseMainFragment
     {
         View view = inflater.inflate(R.layout.settting_fragment, container, false);
 
+        ButterKnife.bind(this, view);
+
         initView(view);
 
         return view;
+    }
+
+    public void test(View view)
+    {
+
     }
 
     @Override
@@ -51,6 +64,15 @@ public class SettingFragment extends BaseMainFragment
 
         mToolbar.setTitle("设置");
         initToolbarNav(mToolbar, true);
+
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                start(OnTripFragmentProgressingExplicit.newInstance(1));
+            }
+        });
     }
 
     /**

@@ -9,4 +9,9 @@
             android:text="设置界面"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView4"/>
+    <Button
+            android:text="Button"
+            android:onClick="test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button2"/>
 </LinearLayout>

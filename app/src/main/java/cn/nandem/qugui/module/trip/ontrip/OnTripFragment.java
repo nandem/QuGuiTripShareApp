@@ -86,7 +86,7 @@ public class OnTripFragment extends BaseMainFragment
     }
 
     public void initFragments() {
-        mFragments.add(OnTripFragmentDoing.newInstance());
+        mFragments.add(OnTripFragmentProgressing.newInstance());
         mFragments.add(OnTripFragmentRecord.newInstance());
         mFragments.add(OnTripFragmentDetail.newInstance());
     }
