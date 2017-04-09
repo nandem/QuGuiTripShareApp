@@ -1,5 +1,6 @@
 package cn.nandem.qugui.module.trip.ontrip;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -58,6 +59,21 @@ public class OnTripFragment extends BaseMainFragment
     public void startExplictiTripProgress(ExplicitProgressingEvent explicitProgressingEvent)
     {
         start(explicitProgressingEvent.getSupportFragment());
+    }
+
+    @Override
+    protected void onFragmentResult(int requestCode, int resultCode, Bundle data)
+    {
+        super.onFragmentResult(requestCode, resultCode, data);
+
+        Toast.makeText(_mActivity, "ok", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        Toast.makeText(_mActivity, "ok", Toast.LENGTH_LONG).show();
     }
 
     @Override

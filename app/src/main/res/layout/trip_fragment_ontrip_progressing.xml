@@ -30,10 +30,11 @@
                     app:layout_rowWeight="1"
                     android:padding="5dp"
                     android:background="@drawable/shape_current_trip_black_border_1dp">
-                <RelativeLayout android:layout_width="match_parent"
+                <ImageView android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:id="@+id/trip_on_trip_rl_1st_box"
-                                android:background="@mipmap/mimi">
+                                android:id="@+id/trip_on_trip_iv_1st_box"
+                                android:background="@mipmap/mimi"
+                           android:scaleType="centerCrop"/>
                     <Button
                             android:text="☷"
                             android:layout_width="wrap_content"
@@ -43,7 +44,6 @@
                             android:textColor="#FFFFFF"
                             android:background="#000000"
                             android:id="@+id/trip_on_trip_btn_1st_phase"/>
-                </RelativeLayout>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="0dp"
@@ -52,10 +52,11 @@
                     app:layout_rowWeight="1"
                     android:padding="5dp"
                     android:background="@drawable/shape_current_trip_black_border_1dp">
-                <RelativeLayout android:layout_width="match_parent"
+                <ImageView android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:id="@+id/trip_on_trip_rl_2nd_box"
-                                android:background="@mipmap/logo">
+                                android:id="@+id/trip_on_trip_iv_2nd_box"
+                                android:background="@mipmap/logo"
+                           android:scaleType="centerCrop"/>
                     <Button
                             android:text="☳"
                             android:layout_width="wrap_content"
@@ -65,7 +66,6 @@
                             android:textColor="#FFFFFF"
                             android:background="#000000"
                             android:id="@+id/trip_on_trip_btn_2nd_phase"/>
-                </RelativeLayout>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="0dp"
@@ -74,9 +74,10 @@
                     app:layout_rowWeight="1"
                     android:padding="5dp"
                     android:background="@drawable/shape_current_trip_black_border_1dp">
-                <RelativeLayout android:layout_width="match_parent"
+                <ImageView android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                android:id="@+id/trip_on_trip_rl_3rd_box">
+                android:id="@+id/trip_on_trip_iv_3rd_box"
+                           android:scaleType="centerCrop"/>
                     <Button
                             android:text="☱"
                             android:layout_width="wrap_content"
@@ -86,7 +87,6 @@
                             android:textColor="#FFFFFF"
                             android:background="#000000"
                             android:id="@+id/trip_on_trip_btn_3rd_phase"/>
-                </RelativeLayout>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="0dp"
@@ -95,9 +95,10 @@
                     app:layout_rowWeight="1"
                     android:padding="5dp"
                     android:background="@drawable/shape_current_trip_black_border_1dp">
-                <RelativeLayout android:layout_width="match_parent"
+                <ImageView android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                android:id="@+id/trip_on_trip_rl_4th_box">
+                           android:id="@+id/trip_on_trip_iv_4th_box"
+                           android:scaleType="centerCrop"/>
                     <Button
                             android:text="☰"
                             android:layout_width="wrap_content"
@@ -107,7 +108,6 @@
                             android:textColor="#FFFFFF"
                             android:background="#000000"
                             android:id="@+id/trip_on_trip_btn_4th_phase"/>
-                </RelativeLayout>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="0dp"
@@ -116,9 +116,10 @@
                     app:layout_rowWeight="1"
                     android:padding="5dp"
                     android:background="@drawable/shape_current_trip_black_border_1dp">
-                <RelativeLayout android:layout_width="match_parent"
+                <ImageView android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                android:id="@+id/trip_on_trip_rl_5th_box">
+                           android:id="@+id/trip_on_trip_iv_5th_box"
+                           android:scaleType="centerCrop"/>
                     <Button
                             android:text="☴"
                             android:layout_width="wrap_content"
@@ -128,7 +129,6 @@
                             android:textColor="#FFFFFF"
                             android:background="#000000"
                             android:id="@+id/trip_on_trip_btn_5th_phase"/>
-                </RelativeLayout>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="0dp"
@@ -137,9 +137,10 @@
                     app:layout_rowWeight="1"
                     android:padding="5dp"
                     android:background="@drawable/shape_current_trip_black_border_1dp">
-                <RelativeLayout android:layout_width="match_parent"
+                <ImageView android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                android:id="@+id/trip_on_trip_rl_6th_box">
+                           android:id="@+id/trip_on_trip_iv_6th_box"
+                           android:scaleType="centerCrop"/>
                     <Button
                             android:text="☷"
                             android:layout_width="wrap_content"
@@ -149,7 +150,6 @@
                             android:textColor="#FFFFFF"
                             android:background="#000000"
                             android:id="@+id/trip_on_trip_btn_6th_phase"/>
-                </RelativeLayout>
             </RelativeLayout>
 
         </android.support.v7.widget.GridLayout>

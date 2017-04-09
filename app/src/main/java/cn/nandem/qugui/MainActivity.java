@@ -23,7 +23,6 @@ import cn.nandem.qugui.module.home.HomeFragment;
 import cn.nandem.qugui.module.recommend.RecommendFragment;
 import cn.nandem.qugui.module.settting.SettingFragment;
 import cn.nandem.qugui.module.trip.MyTripsFragment;
-import cn.nandem.qugui.module.trip.busevent.PhotoCapturedEvent;
 import cn.nandem.qugui.module.trip.ontrip.OnTripFragment;
 import me.yokeyword.fragmentation.SupportActivity;
 import me.yokeyword.fragmentation.SupportFragment;
@@ -148,12 +147,6 @@ public class MainActivity extends SupportActivity implements NavigationView.OnNa
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
-//        data.get
-        EventBus.getDefault().post(new PhotoCapturedEvent());
-        if(requestCode == 007 && resultCode == RESULT_OK)
-        {
-            Toast.makeText(this, "ok", Toast.LENGTH_LONG).show();
-        }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
