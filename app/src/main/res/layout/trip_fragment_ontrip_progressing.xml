@@ -33,7 +33,6 @@
                 <ImageView android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:id="@+id/trip_on_trip_iv_1st_box"
-                                android:background="@mipmap/mimi"
                            android:scaleType="centerCrop"/>
                     <Button
                             android:text="☷"
@@ -55,7 +54,6 @@
                 <ImageView android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:id="@+id/trip_on_trip_iv_2nd_box"
-                                android:background="@mipmap/logo"
                            android:scaleType="centerCrop"/>
                     <Button
                             android:text="☳"

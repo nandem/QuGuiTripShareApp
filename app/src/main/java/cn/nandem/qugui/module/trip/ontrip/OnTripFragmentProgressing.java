@@ -1,5 +1,6 @@
 package cn.nandem.qugui.module.trip.ontrip;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,22 +57,28 @@ public class OnTripFragmentProgressing extends BaseMainFragment implements View.
         switch(uriIndex)
         {
             case R.string.trip_on_trip_explicit_1st:
-                relativeLayoutList.get(0).setImageURI(photoCapturedEvent.getPhotoUri());
+                buttonList.get(0).setTextColor(Color.parseColor("#d11a1e"));
+//                relativeLayoutList.get(0).setImageURI(photoCapturedEvent.getPhotoUri());
                 break;
             case R.string.trip_on_trip_explicit_2nd:
-                relativeLayoutList.get(1).setImageURI(photoCapturedEvent.getPhotoUri());
+                buttonList.get(1).setTextColor(Color.parseColor("#d11a1e"));
+//                relativeLayoutList.get(1).setImageURI(photoCapturedEvent.getPhotoUri());
                 break;
             case R.string.trip_on_trip_explicit_3rd:
-                relativeLayoutList.get(2).setImageURI(photoCapturedEvent.getPhotoUri());
+                buttonList.get(2).setTextColor(Color.parseColor("#d11a1e"));
+//                relativeLayoutList.get(2).setImageURI(photoCapturedEvent.getPhotoUri());
                 break;
             case R.string.trip_on_trip_explicit_4th:
-                relativeLayoutList.get(3).setImageURI(photoCapturedEvent.getPhotoUri());
+                buttonList.get(3).setTextColor(Color.parseColor("#d11a1e"));
+//                relativeLayoutList.get(3).setImageURI(photoCapturedEvent.getPhotoUri());
                 break;
             case R.string.trip_on_trip_explicit_5th:
-                relativeLayoutList.get(4).setImageURI(photoCapturedEvent.getPhotoUri());
+                buttonList.get(4).setTextColor(Color.parseColor("#d11a1e"));
+//                relativeLayoutList.get(4).setImageURI(photoCapturedEvent.getPhotoUri());
                 break;
             case R.string.trip_on_trip_explicit_6th:
-                relativeLayoutList.get(5).setImageURI(photoCapturedEvent.getPhotoUri());
+                buttonList.get(5).setTextColor(Color.parseColor("#d11a1e"));
+//                relativeLayoutList.get(5).setImageURI(photoCapturedEvent.getPhotoUri());
                 break;
         }
     }
